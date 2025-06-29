@@ -28,5 +28,5 @@ defineProps<{
   filled?: boolean;
   base?: string;
 }>();
-const { paths, logo } = useStore()
+const { paths, logo, link: NuxtLink } = useStore()
 </script>

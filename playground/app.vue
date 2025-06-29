@@ -8,6 +8,7 @@
     },
     productHref: (id) => `/item/${id}`,
     logo: AppLogo,
+    link: NuxtLink,
     appConfig: {
       footerText: 'copyright 2025'
     }
@@ -38,6 +39,7 @@
 
 <script setup lang="ts">
 import 'goshop-ui/style.css';
+import { NuxtLink } from '#components';
 const AppLogo = resolveComponent('app-logo')
 const expanded = ref(false)
 useHead({

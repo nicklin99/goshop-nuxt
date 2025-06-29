@@ -48,15 +48,14 @@
 </template>
 
 <script setup lang="ts">
-import { resolveComponent } from "vue"
-const NuxtLink = resolveComponent("NuxtLink")
-import { SfIconCheck, SfListItem, SfAccordionItem, SfIconChevronLeft } from '@storefront-ui/vue';
+import { SfListItem, SfAccordionItem, SfIconChevronLeft } from '@storefront-ui/vue';
 import { type CategoryTreeMenuItemProps, type CategoryMenuContext } from './types';
 import { computed, inject, ref } from 'vue';
 import { categoryKey } from '../utils';
+import { useStore } from "../../hooks/useStore/useStore";
 const ctx = inject<CategoryMenuContext>(categoryKey)
 const props = defineProps<CategoryTreeMenuItemProps>();
 const children = computed(() => props.childIds.map( v => props.treeMap.get(v)!))
-
+const { link: NuxtLink } = useStore()
 const open = ref(props.expanded)
 </script>

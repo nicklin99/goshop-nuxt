@@ -56,10 +56,9 @@
 <script setup lang="ts">
 import { SfLink } from '@storefront-ui/vue';
 import type { CartProductCardProps } from './types';
-import { resolveComponent } from 'vue';
 import { useStore } from '../../hooks/useStore/useStore';
 import QuantitySelector from '../QuantitySelector/QuantitySelector.vue'
-const NuxtLink = resolveComponent('NuxtLink');
+const { link: NuxtLink } = useStore()
 const { id, attributes: attrs, productSkuId, price, productId } = defineProps<CartProductCardProps>();
 const store = useStore()
 const href = store.productHref(productId)

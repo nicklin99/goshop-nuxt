@@ -20,9 +20,11 @@
     "dist"
   ],
   "exports": {
-    ".": "./src",
     "./style.css": "./dist/style.css",
-    "./*": "./src/*"
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
   },
   "author": "nicklin99 <719675210@qq.com>",
   "license": "MIT",

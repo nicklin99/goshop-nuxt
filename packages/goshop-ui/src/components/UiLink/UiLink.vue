@@ -16,6 +16,6 @@
 </template>
 
 <script lang="ts" setup>
-import { resolveComponent } from "vue"
-const NuxtLink = resolveComponent("NuxtLink")
+import { useStore } from "../../hooks/useStore/useStore";
+const { link: NuxtLink } = useStore()
 </script>

@@ -45,8 +45,8 @@
 <script setup lang="ts">
 import { SfLink } from '@storefront-ui/vue';
 import type { ProductCardProps } from './types';
-import { resolveComponent } from "vue"
-const NuxtLink = resolveComponent("NuxtLink")
+import { useStore } from "../../hooks/useStore/useStore";
+const { link: NuxtLink } = useStore()
 
 withDefaults(defineProps<ProductCardProps>(), {
   lazy: true,

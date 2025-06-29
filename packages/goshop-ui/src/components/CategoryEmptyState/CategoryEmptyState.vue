@@ -10,10 +10,8 @@
 </template>
 
 <script setup lang="ts">
-import { resolveComponent } from "vue"
-const NuxtLink = resolveComponent("NuxtLink")
 import EmptyStateIcon from "../images/something-went-wrong.svg?component";
 import { SfButton } from "@storefront-ui/vue";
 import { useStore } from "../../hooks/useStore/useStore";
-const { paths } = useStore();
+const { paths, link: NuxtLink } = useStore();
 </script>
