@@ -1,6 +1,6 @@
-import { defineNuxtPlugin, useRuntimeConfig } from '#app'
-import { OAuth2Config, Oauth2Client, BrowserSession} from 'goauth2'
 import { reactive, toRefs } from 'vue'
+import { OAuth2Config, Oauth2Client, BrowserSession } from 'goauth2'
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 export default defineNuxtPlugin((_nuxtApp) => {
   console.log('goshop plugin injected')

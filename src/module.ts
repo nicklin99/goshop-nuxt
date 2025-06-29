@@ -2,7 +2,7 @@ import { defineNuxtModule, addPlugin, createResolver, addComponent, installModul
 import svgLoader from 'vite-svg-loader'
 import type { BrowserCacheLocation, OauthConfig } from 'goauth2'
 import { defu } from 'defu'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -38,8 +38,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   async setup(_options, _nuxt) {
     // 导出到运行时
-    _nuxt.options.runtimeConfig.public.VsfGoshop = defu(
-      _nuxt.options.runtimeConfig.public.VsfGoshop || {}, {
+    _nuxt.options.runtimeConfig.public.VsfGoshop = Object.assign(_nuxt.options.runtimeConfig.public.VsfGoshop || {}, {
       ..._options
     })
     const resolver = createResolver(import.meta.url)
@@ -90,7 +89,7 @@ export default defineNuxtModule<ModuleOptions>({
     ])
     addImportsDir(resolver.resolve('./runtime/composables'))
 
-    addVitePlugin(svgLoader)
+    // addVitePlugin(svgLoader)
     addTypeTemplate({
       filename: 'types/goshop.d.ts',
       getContents: () => [

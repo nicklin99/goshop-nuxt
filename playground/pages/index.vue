@@ -1,5 +1,5 @@
 <template>
-      <VsfCategory :catId="route.query.cat_id" />
+      <VsfCategory :cat-id="route.query.cat_id" />
 </template>
 
 <script setup lang="ts">

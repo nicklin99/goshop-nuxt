@@ -11,12 +11,12 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-    productId: string
-}>()
 import { useStore, VsfProductPage } from "goshop-ui";
 import type { V1GetProductResponse } from "goshop-api-client/api";
 import { useLazyAsyncData } from "#app";
+const props = defineProps<{
+    productId: string
+}>()
 const ctx = useStore()
 const { data: product, pending, error } = await useLazyAsyncData<V1GetProductResponse>("product", async () => {
   return (await ctx.storefront.v1.productServiceGetProduct(props.productId)).data;

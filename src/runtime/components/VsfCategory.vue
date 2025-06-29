@@ -68,7 +68,7 @@ const products = useLazyAsyncData(async () => {
     console.error(error)
     throw createError({
       statusCode: 500,
-      statusMessage: error.toString()
+      statusMessage: (error as Error).message
     })
   }
 })
@@ -110,9 +110,9 @@ const categoryTitle = computed(() => {
   const cat = catalogsMap.value.get(props.catId?.toString() ?? "");
   return cat?.name;
 });
-const currentCategory = computed(() => {
-  return catalogsMap.value?.get(props.catId?.toString() ?? "");
-});
+// const currentCategory = computed(() => {
+//   return catalogsMap.value?.get(props.catId?.toString() ?? "");
+// });
 const handlePageChange = (pageInfo: PageInfo) => {
   query.value.page = pageInfo.current;
   query.value.pageSize = pageInfo.pageSize;
