@@ -1,12 +1,13 @@
 /* 基础层用于重置规则或应用于纯HTML元素的默认样式。 */
-/* @tailwind base; */
-/* 响应式 */
-@tailwind screens;
+@tailwind base;
 .vsf {
-    /* 实用程序层用于小型、单一用途的类，这些类应始终优先于任何其他样式。 */
-    @tailwind utilities;
-    /* 组件层用于基于类的样式，您希望能够使用utilities覆盖这些样式。 */
-    @tailwind components;
+
+/* 实用程序层用于小型、单一用途的类，这些类应始终优先于任何其他样式。 */
+@tailwind utilities;
+/* 组件层用于基于类的样式，您希望能够使用utilities覆盖这些样式。 */
+@tailwind components;
+    /* 响应式 */
+@tailwind screens;
 }
 
 

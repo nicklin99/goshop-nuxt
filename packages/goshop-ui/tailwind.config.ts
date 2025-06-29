@@ -5,7 +5,7 @@ import sfTypography from '@storefront-ui/typography';
 export default {
   presets: [tailwindConfig],
   content: [
-    "./src/components/**/*.{vue,js,ts,jsx,tsx}",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
     "./node_modules/@storefront-ui/vue/**/*.js"
   ],
   theme: {

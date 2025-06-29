@@ -1,12 +1,5 @@
-import { tailwindConfig } from '@storefront-ui/vue/tailwind-config';
-import sfTypography from '@storefront-ui/typography';
-
 /** @type {import('tailwindcss').Config} */
 export default {
-   presets: [tailwindConfig],
-   plugins: [
-    sfTypography
-  ],
   theme: {
     extend: {
       colors: {
@@ -47,7 +40,8 @@ export default {
   },
   content: [
     "./app.vue",
-    "../node_modules/goshop-ui/src/**/*.{vue,js,ts,jsx,tsx}",
-    "../node_modules/@storefront-ui/vue/**/*.js"
+    "../src/module/**/*.vue",
+    "./pages/**/*.{vue,js,ts,jsx,tsx}",
+    "./components/**/*.{vue,js,ts,jsx,tsx}",
   ],
 };

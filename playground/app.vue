@@ -7,7 +7,10 @@
       cart: '/cart'
     },
     productHref: (id) => `/item/${id}`,
-    logo: AppLogo
+    logo: AppLogo,
+    appConfig: {
+      footerText: 'copyright 2025'
+    }
   }">
     <VsfLayout>
       <template #left>
@@ -33,9 +36,9 @@
   </VsfApp>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import 'goshop-ui/style.css';
 const AppLogo = resolveComponent('app-logo')
-import "goshop-ui/style.css"
 const expanded = ref(false)
 useHead({
   htmlAttrs: {

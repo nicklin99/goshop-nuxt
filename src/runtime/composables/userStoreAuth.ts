@@ -1,5 +1,5 @@
-import { useNuxtApp } from "#app";
-import { toRefs, watchEffect } from "vue";
+import { useNuxtApp, useState } from "#app";
+import { toRefs } from "vue";
 
 export const useStoreAuth = () => {
     const { goauth, pending } = useNuxtApp().$goauth
@@ -10,13 +10,8 @@ export const useStoreAuth = () => {
             user: null,
         }
     })
-    watchEffect(async () => {
-        if (!pending.value) {
-            const ret = await goauth.getAuthResult()
-            Object.assign(state.value, ret)
-        }
-    })
     return {
+        state,
         ...toRefs(state.value),
         logout() {
             pending.value = true

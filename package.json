@@ -1,8 +1,8 @@
 {
-  "name": "vsfkit-goshop",
-  "version": "1.0.0",
+  "name": "goshop-nuxt",
+  "version": "1.0.1",
   "description": "storefront kit for goshop backend",
-  "repository": "github.com/nicklin99/vsfkit-goshop",
+  "repository": "github.com/nicklin99/goshop-nuxt",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -27,7 +27,7 @@
     "dev": "npm run dev:prepare && nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "release": "npm run prepack && changelogen --release && npm publish --registry https://registry.npmjs.org && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch",

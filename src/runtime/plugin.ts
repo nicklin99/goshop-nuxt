@@ -3,7 +3,7 @@ import { OAuth2Config, Oauth2Client, BrowserSession} from 'goauth2'
 import { reactive, toRefs } from 'vue'
 
 export default defineNuxtPlugin((_nuxtApp) => {
-  console.log('goauth injected')
+  console.log('goshop plugin injected')
   const { oauth2, cache } = useRuntimeConfig().public.VsfGoshop
   const oauth2Config = new OAuth2Config(oauth2)
   const store = new BrowserSession(oauth2.clientId, cache.location)

@@ -20,15 +20,15 @@ export default defineNuxtModule<ModuleOptions>({
   // Default configuration options of the Nuxt module
   defaults: {
     oauth2: {
-      clientId: 'goshop_dev',
+      clientId: '',
       clientSecret: '',
-      redirectUri: 'http://localhost:3000/callback',
-      scope: 'email',
+      redirectUri: '',
+      scope: '',
       endpoint: {
-        authURL: 'https://auth.wfell.top/oauth/login',
-        tokenURL: 'https://auth.wfell.top/api/v1/oauth/token',
-        refreshURL: 'https://auth.wfell.top/api/v1/token',
-        userURL: "https://auth.wfell.top/api/v1/user",
+        authURL: '',
+        tokenURL: '',
+        refreshURL: '',
+        userURL: "",
         deviceAuthURL: ""
       }
     },
@@ -103,9 +103,10 @@ export default defineNuxtModule<ModuleOptions>({
             }
           }
         }
-        declare global {
-         export type { PageInfo } from "tdesign-vue-next"
-        }
+        // declare global {
+        //  export type { PageInfo } from "tdesign-vue-next"
+        // }
+        /// <reference types="tdesign-vue-next" />
         export {};`
       ].join('\n'),
     })

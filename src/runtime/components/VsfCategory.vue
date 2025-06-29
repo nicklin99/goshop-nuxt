@@ -1,33 +1,16 @@
 <template>
-  <VsfCategoryPageContent
-    :list="products.data.value?.products ?? []"
-    :total="Number(products.data.value?.total ?? 0)"
-    :status="products.status.value"
-    :pending="products.pending.value"
-    :page-size="query.pageSize"
-    :page="query.page"
-    :title="categoryTitle ?? (props.defaultTitle || $t('allProducts'))"
-  >
+  <VsfCategoryPageContent :list="products.data.value?.products ?? []" :total="Number(products.data.value?.total ?? 0)"
+    :status="products.status.value" :pending="products.pending.value" :page-size="query.pageSize" :page="query.page"
+    :title="categoryTitle ?? (props.defaultTitle || $t('allProducts'))">
     <template #sidebar>
-      <VsfCategoryTreeMenu
-        v-if="filterCategorys"
-        :value="catId"
-        :treeMap="catalogsMap"
-        :childIds="childIds"
-        :expanded="expanded"
-      />
+      <VsfCategoryTreeMenu v-if="filterCategorys" :value="catId" :treeMap="catalogsMap" :childIds="childIds"
+        :expanded="expanded" />
     </template>
     <template #pagination>
       <t-config-provider>
         <t-affix :offset-bottom="0">
-          <t-pagination
-            class="bg-white p-2"
-            :current="query.page"
-            :page-size="query.pageSize"
-            :total="Number(products.data.value?.total ?? 0)"
-            @change="handlePageChange"
-            :pageSizeOptions="[15, 30]"
-          />
+          <t-pagination :current="query.page" :page-size="query.pageSize"
+            :total="Number(products.data.value?.total ?? 0)" @change="handlePageChange" :pageSizeOptions="[15, 30]" />
         </t-affix>
       </t-config-provider>
     </template>
@@ -41,7 +24,7 @@ import {
   VsfCategoryTreeMenu,
   useStore,
 } from "goshop-ui";
-import { useLazyAsyncData, useRoute, useState } from "nuxt/app";
+import { createError, useLazyAsyncData, useRoute, useState } from "nuxt/app";
 import { computed, watch } from "vue";
 
 type Props = {
@@ -58,7 +41,7 @@ const resolveProductHref = (productID: number | string) => {
 const defaultQuery = {
   page: 1,
   pageSize: 15,
-  categoryId: undefined as number | undefined,  
+  categoryId: undefined as number | undefined,
 };
 const query = useState(() => {
   return {
@@ -66,24 +49,31 @@ const query = useState(() => {
     categoryId: props.catId ? Number(props.catId) : undefined,
   };
 });
-const products = await useLazyAsyncData(async () => {
-  const ret = await storefront.v1.productServiceListProducts({
-    ...query.value
-  });
-  
-  const data = ret.data.products?.map(v => {
+const products = useLazyAsyncData(async () => {
+  try {
+    const ret = await storefront.v1.productServiceListProducts({
+      ...query.value
+    });
+    const data = ret.data.products?.map(v => {
       return {
         ...v,
         href: resolveProductHref(v.id!)
       }
-  });
-  return {
-    products: data,
-    total: ret.data.total,
+    });
+    return {
+      products: data,
+      total: ret.data.total,
+    }
+  } catch (error) {
+    console.error(error)
+    throw createError({
+      statusCode: 500,
+      statusMessage: error.toString()
+    })
   }
 })
 // 分类树
-const catalogs = await useLazyAsyncData<V1GetProductCategoryTreeResponse>("catalogs", async () => {
+const catalogs = useLazyAsyncData<V1GetProductCategoryTreeResponse>("catalogs", async () => {
   return (await storefront.v1.productServiceGetProductCategoryTree()).data;
 })
 const childIds = computed(() => {
@@ -100,13 +90,13 @@ const catalogsMap = computed(() => {
 })
 
 const filterCategorys = computed(() => {
-  return catalogs.data.value?.categories?.filter( v => v.level == 0)
+  return catalogs.data.value?.categories?.filter(v => v.level == 0)
 });
 const route = useRoute();
 const breadcrumbs = computed(() => {
   const paths = []
   let current = catalogsMap.value.get(props.catId?.toString() ?? "")
-  while(current) {
+  while (current) {
     paths.unshift(current)
     current = catalogsMap.value.get(current.parentId?.toString() ?? "")
   }
