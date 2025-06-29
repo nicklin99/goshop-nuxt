@@ -4,5 +4,5 @@ packages:
   # all packages in direct subdirs of packages/
   - 'packages/*'
 
-resolutions:
-  packages/*: 'link:./packages/*/src'
+# resolutions:
+#   packages/*: 'link:./packages/*/src'
