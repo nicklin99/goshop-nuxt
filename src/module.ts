@@ -1,7 +1,5 @@
-import { defineNuxtModule, addPlugin, createResolver, addComponent, installModule, addVitePlugin, addTypeTemplate, addImports, addImportsDir } from '@nuxt/kit'
-import svgLoader from 'vite-svg-loader'
+import { defineNuxtModule, addPlugin, createResolver, addComponent, installModule, addTypeTemplate, addImports, addImportsDir } from '@nuxt/kit'
 import type { BrowserCacheLocation, OauthConfig } from 'goauth2'
-import { defu } from 'defu'
 import { fileURLToPath } from 'node:url'
 
 // Module options TypeScript interface definition
