@@ -1,13 +1,13 @@
 {
   "name": "goshop-ui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "release": "pnpm version patch --access public --registry https://registry.npmjs.org",
+    "release": "pnpm version patch && pnpm publish --no-git-checks --access public --registry https://registry.npmjs.org",
     "build:css": "tailwindcss -i ./src/style.css -o ./dist/style.css"
   },
   "dependencies": {
