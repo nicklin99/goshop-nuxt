@@ -1,0 +1,7 @@
+@tailwind base;
+
+.vsf {
+    @tailwind components;
+    @tailwind utilities;
+    @tailwind screens;
+}

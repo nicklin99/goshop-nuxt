@@ -1,0 +1,61 @@
+{
+  "name": "vsfkit-goshop",
+  "version": "1.0.0",
+  "description": "storefront kit for goshop backend",
+  "repository": "github.com/nicklin99/vsfkit-goshop",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "main": "./dist/module.mjs",
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/types.d.mts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build build",
+    "dev": "npm run dev:prepare && nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.17.5",
+    "@nuxtjs/i18n": "latest",
+    "@tdesign-vue-next/nuxt": "^0.1.5",
+    "goauth2": "workspace:*",
+    "goshop-api-client": "workspace:*",
+    "goshop-ui": "workspace:*",
+    "tdesign-vue-next": "^1.13.2"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^2.5.0",
+    "@nuxt/eslint-config": "^1.4.1",
+    "@nuxt/module-builder": "^1.0.1",
+    "@nuxt/schema": "^3.17.5",
+    "@nuxt/test-utils": "^3.19.1",
+    "@types/node": "latest",
+    "changelogen": "^0.6.1",
+    "eslint": "^9.28.0",
+    "nuxt": "^3.17.5",
+    "typescript": "~5.8.3",
+    "vite-svg-loader": "^5.1.0",
+    "vitest": "^3.2.3",
+    "vue-tsc": "^2.2.10"
+  },
+  "packageManager": "pnpm@8.10.5+sha1.4370a069f21873a0ad83c785b8048ed8caf6e6e9"
+}

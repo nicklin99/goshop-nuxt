@@ -1,0 +1,17 @@
+ {
+    "id": "09edc051-3401-4037-a743-15d2624f5d3b",
+    "aud": "",
+    "role": "admin",
+    "email": "719675210@qq.com",
+    "confirmed_at": "2025-06-01T12:35:44Z",
+    "confirmation_sent_at": "2025-06-01T12:35:06Z",
+    "recovery_sent_at": "2025-06-02T04:07:21Z",
+    "app_metadata": {
+        "provider": "email"
+    },
+    "user_metadata": {
+        "locale": "zh"
+    },
+    "created_at": "2025-06-01T12:35:06Z",
+    "updated_at": "2025-06-01T12:35:06Z"
+}

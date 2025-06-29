@@ -1,0 +1,416 @@
+{
+  "billing": {
+    "heading": "Billing Address",
+    "description": "Add a billing address. You will receive the invoice to the email address provided above.",
+    "addButton": "Add billing address"
+  },
+  "shipping": {
+    "heading": "收货地址",
+    "description": "添加收货地址",
+    "addButton": "添加收货地址"
+  },
+  "form": {
+    "nameLabel": "姓名",
+    "firstNameLabel": "姓",
+    "lastNameLabel": "名字",
+    "phoneLabel": "手机号",
+    "countryLabel": "国家",
+    "streetNameLabel": "街道",
+    "streetNameHelp": "街道地址",
+    "streetNumberLabel": "街道号",
+    "streetNumberHelp": "可选",
+    "provinceLabel": "省",
+    "cityLabel": "城市",
+    "stateLabel": "州",
+    "postalCodeLabel": "邮政编码",
+    "defaultStatusLabel": "设为默认",
+    "regionLabel": "地区",
+    "useAsShippingLabel": "Use as shipping address",
+    "selectPlaceholder": "-- Select --",
+    "emailLabel": "Email",
+    "usernameLabel": "用户名",
+    "passwordLabel": "密码",
+    "passwordHint": "8 or more characters with a mix of letters, numbers and symbols.",
+    "termsAndConditionsLabel": "I declare that I have read and accept the {terms}",
+    "subscriptionLabel": "I wish to receive occasional emails about special offers, new products and exclusive promotions. I can cancel my subscription at any time. (Optional)",
+    "asterixHint": "* marked consents are required"
+  },
+  "CoolShare": "Kingtime金泰",
+  "hero.COOLSHARE": "酷享智能",
+  "hero.Build Better Life": "共建美好生活",
+  "myCart": "我的购物车",
+  "orderSummary": "订单摘要",
+  "itemsInCart": "(商品: {count})",
+  "itemsSubtotal": "小计",
+  "originalPrice": "原价",
+  "savings": "优惠",
+  "estimatedTax": "增值税",
+  "apply": "使用",
+  "total": "实付款",
+  "goToCheckout": "去结算",
+  "savingsTag": "优惠 {amount} ",
+  "promoCodePlaceholder": "输入优惠码",
+  "delivery": "发货",
+  "promoCode": "优惠码",
+  "remove": "删除",
+  "emptyCart": "购物车空空的",
+  "emptyCartImgAlt": "empty cart image",
+  "backToShopping": "返回继续购物",
+  "allFromCategory": "All {name}",
+  "listSettings": "分类菜单",
+  "closeListSettings": "Close list settings",
+  "clearFilters": "Clear all filters",
+  "showProducts": "显示商品",
+  "showMore": "更多",
+  "Show more": "更多",
+  "showLess": "Show less",
+  "filters": "筛选",
+  "allProducts": "全部",
+  "sortBy": "排序",
+  "sortType": {
+    "latest": "综合排序",
+    "priceUp": "价格从低到高",
+    "priceDown": "价格从高到低",
+    "relevance": "销量"
+  },
+  "numberOfProducts": "1 Product | {count} 商品",
+  "prev": "上一页",
+  "next": "下一页",
+  "emptyStateText": "该分类还没有商品.",
+  "emptyStateText2": "尚未找到您要查找的商品?",
+  "emptyStateAltText": "未找到商品的图像",
+  "resultsFor": "全部结果 \"{phrase}\"",
+  "prevAriaLabel": "上一页",
+  "nextAriaLabel": "下一页",
+  "secondPageAriaLabel": "第二页",
+  "lastPageAriaLabel": "最后一页",
+  "currentPage": "{page} of {totalPages} 页",
+  "checkout": "结算",
+  "backToCart": "返回我的购物车",
+  "back": "返回",
+  "placeOrder": "提交订单",
+  "termsInfo": "By placing my order, you agree to our {terms} and our {privacyPolicy}",
+  "termsAndConditions": "Terms and Conditions",
+  "privacyPolicy": "Privacy Policy",
+  "tomorrow": "Tomorrow",
+  "contactInfo": {
+    "heading": "Contact Information",
+    "description": "Add your email and phone number to communicate with the store.",
+    "add": "Add contact information",
+    "email": "Email",
+    "phone": "Phone number",
+    "phonePlaceholder": "eg. 123 456 7890",
+    "cancel": "取消",
+    "save": "保存",
+    "edit": "编辑",
+    "delete": "删除"
+  },
+  "checkoutPayment": {
+    "heading": "支付方式",
+    "comingSoon": "Coming soon",
+    "cash": "货到付款",
+    "creditCard": "信用卡",
+    "paypalIconAlt": "Paypal Icon",
+    "applePayIconAlt": "Apple Pay Icon",
+    "googlePayIconAlt": "Google Pay icon",
+    "alipayIconAlt": "支付宝支付"
+  },
+  "shippingMethod": {
+    "heading": "配送方式",
+    "description": "在提供发货地址之前不可用",
+    "Standard": "标准"
+  },
+  "validation": {
+    "heading": "去完成订单:",
+    "missingBillingAddress": "添加账单地址",
+    "missingShippingAddress": "添加收货地址",
+    "missingEmail": "客户邮箱必填",
+    "missingShippingDetails": "添加收货详细地址",
+    "missingPaymentMethod": "选择支付方式"
+  },
+  "size": "尺码",
+  "color": "颜色",
+  "addToCart": "加入购物车",
+  "buyNow": "立即购买",
+  "addToCartShort": "加入",
+  "search": "搜索",
+  "openSearchModalButtonLabel": "点击打开搜索框",
+  "vsfHomepage": "CoolShare首页",
+  "home": "首页",
+  "Shop by category": "产品分类",
+  "New Products": "新鲜好物",
+  "Feature Brand": "推荐品牌",
+  "Inspired by your picks": "人气推荐",
+  "products": "商品",
+  "cart": "购物车",
+  "wishlist": "心愿单",
+  "addProductToWishlist": "Add {label} to wishlist",
+  "quantitySelector": "数量选择",
+  "quantitySelectorDecrease": "减",
+  "quantitySelectorIncrease": "加",
+  "of": "of",
+  "scrollTop": "滚动到顶部",
+  "numberInCart": "{count} 购物车中商品",
+  "cardImagePlaceholder": "Card image placeholder",
+  "displayImage": "Display image",
+  "allProductsLinkText": "浏览商品",
+  "breadcrumbsDropdownText": "Show more breadcrumbs",
+  "youAreOfflineText": "It seems you are currently offline, check your internet connection",
+  "viewCart": "View Cart",
+  "compare": "Compare",
+  "addToList": "Add to list",
+  "category": "分类",
+  "imageOfSth": "Image of {name}",
+  "categories": {
+    "How to buy": {
+      "label": "关于我们",
+      "subcategories": {
+        "paymentMethods": "Payment methods",
+        "orderPickup": "Order pickup",
+        "purchaseStatus": "Purchase status",
+        "trackOrders": "Track orders",
+        "returns": "Returns"
+      }
+    },
+    "Help": {
+      "label": "工厂品牌",
+      "subcategories": {
+        "helpCenter": "Help center",
+        "securityFraud": "Security & fraud",
+        "feedback": "Feedback",
+        "contact": "Contact"
+      }
+    },
+    "Services": {
+      "label": "信息发布",
+      "subcategories": {
+        "giftCards": "Gift cards",
+        "storeLocator": "Store Locator",
+        "clickCollect": "Click & Collect",
+        "sameDayDelivery": "Same Day Delivery",
+        "shippingDelivery": "Shipping & Delivery",
+        "couponsDiscounts": "Coupons & Discounts",
+        "newsletter": "Newsletter"
+      }
+    },
+    "About": {
+      "label": "联系我们",
+      "subcategories": {
+        "aboutUs": "About us",
+        "jobs": "Jobs",
+        "pressCenter": "Press Center",
+        "affiliateProgram": "Affiliate program",
+        "suppliers": "Suppliers"
+      }
+    }
+  },
+  "contactOptions": {
+    "helpCenter": {
+      "label": "Help center",
+      "details": {
+        "description": "Find answers online anytime"
+      }
+    },
+    "liveChat": {
+      "label": "Live chat",
+      "details": {
+        "openingHours-1": "Mon-Fri, 9am-5pm"
+      }
+    },
+    "phone": {
+      "label": "19357612611",
+      "details": {
+        "openingHours-1": "Mon-Fri, 9am-5pm"
+      }
+    }
+  },
+  "bottomLinks": {
+    "terms": "Terms",
+    "privacyPolicy": "Privacy policy"
+  },
+  "cartUpdateMessage": "购物车更新",
+  "socialLabel": "Go to {label} page",
+  "failedInfoHeader": "我们真的很抱歉.",
+  "failedInfoMessage": "您的订单尚未完成.",
+  "successInfoHeader": "感谢,Thank you!",
+  "successInfoMessage": "订单提交成功",
+  "etaDelivery": "预估发货时间",
+  "shippingAddress": "收货地址",
+  "somethingWentWrongImageAlt": "图片错误",
+  "orderSuccessfulImageAlt": "订单成功图",
+  "backToCheckout": "返回结算",
+  "continueShopping": "继续购物",
+  "orderErrorMessage": "发生错误. 稍后再试.",
+  "orderNumber": "订单号",
+  "productDetails": "商品介绍",
+  "Attributes": "规格参数",
+  "customerReviews": "评价",
+  "loadingReviews": "加载评价...",
+  "reviewsCount": "{count} 评价",
+  "recommendedProducts": "相似推荐商品",
+  "outOfStock": "缺货",
+  "additionalInfo": {
+    "shipping": "Free shipping, arrives by Thu, Apr 7. Want it faster? {addAddress} to see options",
+    "addAddress": "Add an address",
+    "pickup": "Pickup not available at Super center. {checkAvailability}",
+    "checkAvailability": "Check availability nearby",
+    "returns": "Free 30-Day returns. {details}",
+    "details": "Details"
+  },
+  "sale": "Sale",
+  "saleCount": "销量",
+  "visitCount": "浏览量",
+  "stockCount": "库存",
+  "readMore": "更多",
+  "readLess": "更少",
+  "noReviews": "无评价",
+  "loading": "加载中",
+  "gallery": {
+    "count": "{current} of {total}",
+    "thumb": "Go to slide {index}",
+    "prev": "Previous",
+    "next": "Next",
+    "image": "Slide {index}"
+  },
+  "review": {
+    "reportAbuse": "举报",
+    "verifiedPurchase": "认证已购买"
+  },
+  "account": {
+    "heading": "我的账号",
+    "navBarBottomHeading": "账号",
+    "logout": "退出",
+    "back": "返回",
+    "accountSettings": {
+      "heading": "账号设置",
+      "section": {
+        "personalData": "个人信息",
+        "billingDetails": "账单信息",
+        "shippingDetails": "收货信息"
+      },
+      "personalData": {
+        "yourName": "你的姓名",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "edit": "编辑",
+        "change": "修改",
+        "contactInformation": "联系信息",
+        "yourPassword": "你的密码",
+        "passwordChange": "密码修改",
+        "newPassword": "新密码",
+        "newPasswordAgain": "重复新的密码",
+        "changePassword": "修改密码",
+        "currentPassword": "当前密码",
+        "passwordHelp": "建议8位以上字符或数字或特殊字符组合"
+      },
+      "billingDetails": {
+        "billingAddress": "Billing address",
+        "edit": "编辑",
+        "shippingAddress": "Shipping address"
+      },
+      "shippingDetails": {
+        "edit": "编辑",
+        "shippingAddress": "收货地址"
+      }
+    },
+    "ordersAndReturns": {
+      "heading": "订单&售后",
+      "orderId": "订单ID",
+      "orderNumber": "订单号",
+      "orderDate": "订单时间",
+      "amount": "总额",
+      "status": "状态",
+      "details": "详情",
+      "myOrders": "我的订单",
+      "noOrders": "还没有记录",
+      "continue": "继续购物",
+      "noOrdersAltText": "没有订单",
+      "returnsHeading": "售后",
+      "returnsAltText": "没有退货售后",
+      "returnsDescription": "还没有退回商品",
+      "listOfOrders": "订单列表",
+      "section": {
+        "myOrders": "我的订单",
+        "returns": "售后"
+      },
+      "orderDetails": {
+        "heading": "订单详情",
+        "orderId": "订单ID",
+        "orderDate": "下单时间",
+        "paymentAmount": "支付金额",
+        "status": "订单状态",
+        "price": "价格",
+        "quantity": "数量",
+        "subtotal": "小计",
+        "tableCaption": "清单",
+        "product": "商品",
+        "itemsSubtotal": "小计",
+        "delivery": "发货方式",
+        "estimatedTax": "增值税",
+        "promotionAmount": "活动优惠",
+        "couponAmount": "优惠劵优惠",
+        "scoreAmount": "积分抵扣",
+        "freightAmount": "运费",
+        "total": "实付金额",
+        "billingAddress": "账单地址",
+        "paymentMethod": "支付方式",
+        "shippingAddress": "收货地址",
+        "goPay": "去支付",
+        "NeedPay": "待支付",
+        "Payed": "待发货",
+        "Shipped": "已发货",
+        "Complete": "已完成",
+        "Closed": "已关闭"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "heading": "会员登录",
+      "submitLabel": "登录",
+      "forgotPasswordLabel": "忘记密码",
+      "rememberMeLabel": "记住我",
+      "createAccountBanner": "新用户? {0}.",
+      "createAccountLinkLabel": "创建账号"
+    },
+    "signup": {
+      "heading": "注册账号",
+      "createButton": "创建账号",
+      "bannerText": "已经有账户? 去 {login}",
+      "modal": {
+        "heading": "欢迎",
+        "description": "您的账号已创建. 可以登录账号 {information} , 以便不用购买时登录",
+        "information": "添加信息",
+        "button": "去购物",
+        "imageAlt": "注册成功"
+      }
+    },
+    "resetPassword": {
+      "heading": "Reset password",
+      "info": "Enter the email address you used to sign up. We will send you a password reset link, that you’ll be able to use to set a new password for your account.",
+      "email": "Email",
+      "continue": "Continue",
+      "backToLogin": "Back to Login",
+      "thankYou": "Thank you, if there is an account registered with {0}, you should receive the password reset link in your inbox right away.",
+      "anotherEmail": "I need to try another email address",
+      "emailSent": "Email sent"
+    },
+    "setNewPassword": {
+      "heading": "Set new password",
+      "button": "Set new password",
+      "password": "New password",
+      "repeatPassword": "Repeat new password",
+      "help": "8 or more characters with a mix of letters, numbers and symbols.",
+      "description": "Create the new password you want to use to log in to your account."
+    }
+  },
+  "cms": {
+    "emptyStateAltText": "没有找到内容",
+    "lastUpdated": "最后更新时间"
+  },
+  "Alipay": "支付宝",
+  "PayResultPending": "支付结果查询中",
+  "PayResultSuccess": "支付成功",
+  "Wechat": "微信",
+  "brand": "金泰精锻科技"
+}

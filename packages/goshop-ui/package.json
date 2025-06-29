@@ -1,0 +1,43 @@
+{
+  "name": "goshop-ui",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "build:css": "tailwindcss -i ./src/style.css -o ./dist/style.css"
+  },
+  "dependencies": {
+    "@storefront-ui/vue": "canary",
+    "@vueuse/core": "^10.3.0",
+    "goshop-api-client": "workspace:*",
+    "lodash-es": "^4.17.21",
+    "vue": "^3.5.13"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./src",
+    "./style.css": "./dist/style.css",
+    "./*": "./src/*"
+  },
+  "author": "nicklin99 <719675210@qq.com>",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@storefront-ui/typography": "^2.6.1",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vue/tsconfig": "^0.7.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-svg-loader": "^5.1.0",
+    "vue-i18n": "^11.1.7",
+    "vue-tsc": "^2.2.10"
+  }
+}
