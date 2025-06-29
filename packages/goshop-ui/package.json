@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "release": "pnpm version patch && pnpm publish --no-git-checks --access public --registry https://registry.npmjs.org",
+    "release": "pnpm publish --access public --registry https://registry.npmjs.org",
     "build:css": "tailwindcss -i ./src/style.css -o ./dist/style.css"
   },
   "dependencies": {
