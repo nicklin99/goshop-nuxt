@@ -91,6 +91,21 @@ export class OAuth2Config {
         return data
     }
 
+    async invite(accessToken: string, email: string, userData = {}) {
+        const uri = new URL(`${this.endpoint.userURL.replace('/user', '/invite')}`)
+        const data = await fetch(uri, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${accessToken}`
+            },
+            body: JSON.stringify({
+                email,
+                data: userData
+            })
+        }).then(res => res.json());
+        return data
+    }
+
     generateRandomState() {
         return this.randomBytes();
     }

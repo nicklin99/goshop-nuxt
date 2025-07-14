@@ -136,4 +136,10 @@ export class Oauth2Client {
         }
         return this.getAuthResult()
     }
+
+    // 邀请
+    async invite(email: string, userData = {}) {
+        const { accessToken } = await this.getToken()
+        return this.oauth2.invite(accessToken, email, userData)
+    }
 }
