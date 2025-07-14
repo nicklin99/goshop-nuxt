@@ -34,11 +34,12 @@ export class BrowserSession {
     }
 
     getUser(key: string) {
-        const data = this.store.getItem(key);
-        if (data) {
-            return new User(data as any);
+        try {
+            const userData = JSON.parse(this.store.getItem(key)!)
+            return new User(userData as any);
+        } catch (error) {
+            return null
         }
-        return null
     }
 
     getToken() {
