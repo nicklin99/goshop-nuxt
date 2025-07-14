@@ -12,9 +12,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": ["dist"],
-  "exports": {
-    ".": "./src"
-  },
   "keywords": [],
   "author": "nicklin99 <719675210@qq.com>",
   "license": "MIT"
