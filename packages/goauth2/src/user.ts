@@ -14,10 +14,10 @@ export class User {
     aud: string;
     role: string;
     email: string;
-    confirmedAt: string;
-    confirmationSentAt: string;
-    appMetadata: AppMetadata;
-    userMetadata: UserMetadata;
+    confirmed_at: string;
+    confirmation_sent_at: string;
+    app_metadata: AppMetadata;
+    user_metadata: UserMetadata;
 
     constructor(data: {
         id: string;
@@ -36,10 +36,10 @@ export class User {
         this.aud = data.aud;
         this.role = data.role;
         this.email = data.email;
-        this.confirmedAt = data.confirmed_at;
-        this.confirmationSentAt = data.confirmation_sent_at;
-        this.userMetadata = data.user_metadata;
-        this.appMetadata = data.app_metadata;
+        this.confirmed_at = data.confirmed_at;
+        this.confirmation_sent_at = data.confirmation_sent_at;
+        this.user_metadata = data.user_metadata;
+        this.app_metadata = data.app_metadata;
     }
 
     // 暂时只能登录一个
