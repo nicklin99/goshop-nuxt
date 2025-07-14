@@ -20,3 +20,36 @@ export type TokenKey = {
     idToken: string;
 }
 
+export const GoauthStatus = {
+    /**
+     * Initial status before interaction occurs
+     */
+    Startup: "startup",
+    /**
+     * Status set when all login calls occuring
+     */
+    Login: "login",
+    /**
+     * Status set when logout call occuring
+     */
+    Logout: "logout",
+    /**
+     * Status set for acquireToken calls
+     */
+    AcquireToken: "acquireToken",
+    /**
+     * Status set for ssoSilent calls
+     */
+    SsoSilent: "ssoSilent",
+    /**
+     * Status set when handleRedirect in progress
+     */
+    HandleRedirect: "handleRedirect",
+    /**
+     * Status set when interaction is complete
+     */
+    None: "none",
+}
+
+export type GoauthStatusType =
+    (typeof GoauthStatus)[keyof typeof GoauthStatus];

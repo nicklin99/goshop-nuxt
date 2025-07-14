@@ -1,5 +1,6 @@
 import type { OAuth2Config, RefeshTokenResponse } from "./oauth2";
 import type { BrowserSession } from "./store";
+import { GoauthStatus, type GoauthStatusType } from "./types";
 import { User } from "./user";
 
 export type TokenClaims = {
@@ -120,7 +121,19 @@ export class Oauth2Client {
         })
         window.location.href = url
     }
+
     logout() {
         this.store.store.clear()
+    }
+
+    // 初始化
+    async setup(status: GoauthStatusType) {
+        if (status === GoauthStatus.Startup) {
+            const { accessToken } = await this.getToken()
+            const user = await this.oauth2.getUserInfo(accessToken)
+            const userEntity = new User(user)
+            this.store.setUser(userEntity)
+        }
+        return this.getAuthResult()
     }
 }
